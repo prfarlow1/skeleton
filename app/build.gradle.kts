@@ -59,7 +59,15 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:1.2.1")
 
     // Optional - Integration with activities
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation("androidx.activity:activity-compose:1.6.0")
     // Optional - Integration with ViewModels
+
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-process:2.5.1")
+
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
+    implementation("androidx.startup:startup-runtime:1.1.1")
+
+    implementation("org.tinylog:tinylog-impl:2.5.0")
+    implementation("org.tinylog:tinylog-api-kotlin:2.5.0")
 }
