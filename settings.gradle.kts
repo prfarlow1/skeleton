@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Carbrain"
-include ':app'
+include(":app")
