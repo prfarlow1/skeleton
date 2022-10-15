@@ -18,5 +18,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "Carbrain"
+rootProject.name = "Skeleton"
 include(":app")

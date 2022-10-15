@@ -62,5 +62,4 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.5.1")
     // Optional - Integration with ViewModels
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
-    //implementation("com.google.android.material:material:1.4.0")
 }
