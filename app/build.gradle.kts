@@ -65,10 +65,13 @@ dependencies {
 
     implementation("androidx.startup:startup-runtime:1.1.1")
 
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
 
     implementation("io.insert-koin:koin-android:3.2.2")
     implementation("io.insert-koin:koin-androidx-compose:3.2.1")
+    implementation("io.insert-koin:koin-androidx-workmanager:3.2.2")
 
     implementation("org.tinylog:tinylog-impl:2.5.0")
     implementation("org.tinylog:tinylog-api-kotlin:2.5.0")
