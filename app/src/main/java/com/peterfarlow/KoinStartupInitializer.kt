@@ -3,7 +3,6 @@ package com.peterfarlow
 
 import android.content.Context
 import androidx.startup.Initializer
-import androidx.work.WorkManagerInitializer
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.workmanager.koin.workManagerFactory
@@ -20,5 +19,5 @@ class KoinStartupInitializer : Initializer<KoinApplication> {
             modules(appModule)
         }
 
-    override fun dependencies() = listOf<Class<out Initializer<*>>>(WorkManagerInitializer::class.java)
+    override fun dependencies() = listOf<Class<out Initializer<*>>>()
 }
