@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".SkeletonApplication"
+        android:name="com.peterfarlow.SkeletonApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         tools:targetApi="33">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.peterfarlow.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.peterfarlow.LoginActivity"
             android:exported="false" />
 
         <provider

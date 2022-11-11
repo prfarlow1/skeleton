@@ -23,11 +23,8 @@ class MainActivity : AppCompatActivity() {
                 composable("home") {
                     HomeScreen(navController)
                 }
-                activity("login2") {
+                activity("login") {
                     activityClass = LoginActivity::class
-                }
-                composable("login") {
-                    LoginScreen()
                 }
                 composable("create-account") {
 

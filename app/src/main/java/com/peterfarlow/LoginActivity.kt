@@ -10,6 +10,8 @@ import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.gms.common.api.ApiException
+import com.peterfarlow.skeleton.BuildConfig
+import com.peterfarlow.skeleton.R
 import org.tinylog.kotlin.Logger
 
 class LoginActivity : AppCompatActivity() {

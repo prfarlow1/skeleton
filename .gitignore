@@ -15,3 +15,4 @@
 local.properties
 keystore.properties
 release.keystore
+/twitter/src/main/java/com/farlow/twitter/Secrets.kt
