@@ -7,5 +7,6 @@ class SkeletonApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Logger.debug { "application started" }
+        Logger.debug { packageName }
     }
 }

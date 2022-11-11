@@ -1,8 +1,13 @@
 package com.peterfarlow
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.navigation.activity
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -16,10 +21,13 @@ class MainActivity : AppCompatActivity() {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = "home") {
                 composable("home") {
-                    HomeScreen()
+                    HomeScreen(navController)
+                }
+                activity("login2") {
+                    activityClass = LoginActivity::class
                 }
                 composable("login") {
-
+                    LoginScreen()
                 }
                 composable("create-account") {
 
@@ -31,3 +39,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "appData")

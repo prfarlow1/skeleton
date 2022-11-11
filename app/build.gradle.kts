@@ -19,13 +19,18 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.peterfarlow"
+        applicationId = "com.peterfarlow.skeleton"
         minSdk = 31
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField(
+            "String",
+            "web_client_id",
+            "\"${keystoreProperties.getProperty("webClientId")}\""
+        )
     }
 
     signingConfigs {
@@ -39,8 +44,8 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -106,4 +111,9 @@ dependencies {
 
     implementation("org.tinylog:tinylog-impl:2.5.0")
     implementation("org.tinylog:tinylog-api-kotlin:2.5.0")
+
+    implementation("com.google.android.gms:play-services-auth:20.3.0")
+
+    implementation("androidx.datastore:datastore-preferences:1.1.0-alpha01")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
 }
