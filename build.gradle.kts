@@ -2,5 +2,5 @@
 plugins {
     id("com.android.application") version "7.3.1" apply false
     id("com.android.library") version "7.3.1" apply false
-    id("org.jetbrains.kotlin.android") version "1.7.20" apply false // compose compiler 1.3.2 needs 1.7.20
+    id("org.jetbrains.kotlin.android") version "1.7.22" apply false // compose compiler 1.3.2 needs 1.7.22
 }
