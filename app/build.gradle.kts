@@ -107,7 +107,7 @@ dependencies {
 
     implementation("io.insert-koin:koin-android:3.3.0")
     implementation("io.insert-koin:koin-androidx-compose:3.3.0")
-    implementation("io.insert-koin:koin-androidx-workmanager:3.3.0")
+    implementation("io.insert-koin:koin-androidx-workmanager:3.3.1")
 
     implementation("org.tinylog:tinylog-impl:2.5.0")
     implementation("org.tinylog:tinylog-api-kotlin:2.5.0")
