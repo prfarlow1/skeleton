@@ -105,7 +105,7 @@ dependencies {
 
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
 
-    implementation("io.insert-koin:koin-android:3.3.0")
+    implementation("io.insert-koin:koin-android:3.3.3")
     implementation("io.insert-koin:koin-androidx-compose:3.3.0")
     implementation("io.insert-koin:koin-androidx-workmanager:3.3.0")
 
