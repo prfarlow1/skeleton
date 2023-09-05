@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
                 activity("login") {
                     activityClass = LoginActivity::class
                 }
-                composable("create-account") {
-
+                composable("test") {
                 }
                 composable("onboarding") {
 
