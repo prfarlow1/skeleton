@@ -1,6 +1,5 @@
 package com.peterfarlow
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.ime
-import androidx.compose.foundation.layout.imeNestedScroll
 import androidx.compose.foundation.layout.isImeVisible
-import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -30,8 +27,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetLayout
 import androidx.compose.material3.Card
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -50,12 +45,8 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.navigation.activity
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -81,10 +72,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 composable("test") {
                     val keyboardInset = rememberUpdatedState(WindowInsets.ime)
-                    val navBarInset = rememberUpdatedState(WindowInsets.navigationBars)
+                    //val navBarInset = rememberUpdatedState(WindowInsets.navigationBars)
                     val keyboardBottom = keyboardInset.value.getBottom(LocalDensity.current)
                     val focusManager = LocalFocusManager.current
-                    val paddingBottom = with(LocalDensity.current) {
+                    /*val paddingBottom = with(LocalDensity.current) {
                         if (WindowInsets.isImeVisible) {
                             maxOf(
                                 keyboardBottom,
@@ -93,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                         } else {
                             navBarInset.value.getBottom(this).toDp()
                         }
-                    }
+                    }*/
                     println("WindowInsets.isImeVisible=${WindowInsets.isImeVisible} keyboardBottom=$keyboardBottom")
                     ModalBottomSheetLayout(
                         modifier = Modifier
@@ -187,7 +178,7 @@ private fun LazyListState.isScrollingUp(): Boolean {
     }.value
 }
 
-val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "appData")
+//val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "appData")
 
 private val loremIpsum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n"

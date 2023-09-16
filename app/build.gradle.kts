@@ -90,7 +90,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // compose
-    val composeBom = platform("androidx.compose:compose-bom:2023.08.00")
+    val composeBom = platform("androidx.compose:compose-bom:2023.09.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
     implementation("androidx.activity:activity-compose:1.7.2")
@@ -109,11 +109,12 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.8.1")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
-    implementation("io.insert-koin:koin-android:3.3.0")
-    implementation("io.insert-koin:koin-androidx-compose:3.3.0")
-    implementation("io.insert-koin:koin-androidx-workmanager:3.3.0")
+    implementation(platform("io.insert-koin:koin-bom:3.5.1"))
+    implementation("io.insert-koin:koin-android")
+    implementation("io.insert-koin:koin-androidx-compose")
+    implementation("io.insert-koin:koin-androidx-workmanager")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
-    implementation("org.tinylog:tinylog-api-kotlin:2.6.1")
-    implementation("org.tinylog:tinylog-impl:2.6.1")
+    implementation("org.tinylog:tinylog-api-kotlin:2.6.2")
+    implementation("org.tinylog:tinylog-impl:2.6.2")
     ksp("androidx.room:room-compiler:2.5.2")
 }
