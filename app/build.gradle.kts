@@ -114,6 +114,6 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-workmanager:3.3.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
     implementation("org.tinylog:tinylog-api-kotlin:2.6.1")
-    implementation("org.tinylog:tinylog-impl:2.6.1")
+    implementation("org.tinylog:tinylog-impl:2.6.2")
     ksp("androidx.room:room-compiler:2.5.2")
 }
