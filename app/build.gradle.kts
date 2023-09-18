@@ -108,7 +108,7 @@ dependencies {
     implementation("androidx.startup:startup-runtime:1.1.1")
     implementation("androidx.work:work-runtime-ktx:2.8.1")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
     implementation("io.insert-koin:koin-android:3.3.0")
     implementation("io.insert-koin:koin-androidx-compose:3.3.0")
     implementation("io.insert-koin:koin-androidx-workmanager:3.3.0")
