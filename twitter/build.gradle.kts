@@ -10,7 +10,7 @@ java {
 }
 
 dependencies {
-    val KTOR_VERSION = "2.2.2"
+    val KTOR_VERSION = "2.3.4"
     implementation("io.ktor:ktor-client-core:$KTOR_VERSION")
     implementation("io.ktor:ktor-client-content-negotiation:$KTOR_VERSION")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$KTOR_VERSION")
