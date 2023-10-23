@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         gradlePluginPortal()
         google()
@@ -10,12 +11,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-    }
-    versionCatalogs {
-        create("libs") {
-            library("androidx-core", "androidx.core:core-ktx:1.9.0")
-            library("androidx-appcompat", "androidx.appcompat:appcompat:1.6.1")
-        }
     }
 }
 rootProject.name = "Skeleton"

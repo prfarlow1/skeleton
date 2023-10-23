@@ -2,9 +2,9 @@ import java.io.FileInputStream
 import java.util.Properties
 
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.skeleton.android.application)
+    alias(libs.plugins.skeleton.android.application.compose)
+    alias(libs.plugins.skeleton.android.room)
 }
 
 val keystorePropertiesFile: File = rootProject.file("keystore.properties")
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId = "com.peterfarlow.skeleton"
-        minSdk = 31
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -71,6 +71,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -81,40 +82,21 @@ android {
 dependencies {
 
     // core
-    implementation(libs.androidx.core)
-    implementation(libs.androidx.appcompat)
 
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.10")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.junit4)
+    testImplementation(kotlin("test"))
 
-    // compose
-    val composeBom = platform("androidx.compose:compose-bom:2023.09.00")
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material:material")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.datastore:datastore-preferences:1.1.0-alpha05")
-    implementation("androidx.lifecycle:lifecycle-process:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2")
-    implementation("androidx.navigation:navigation-compose:2.7.2")
-    implementation("androidx.room:room-ktx:2.5.2")
-    implementation("androidx.room:room-runtime:2.5.2")
-    implementation("androidx.startup:startup-runtime:1.1.1")
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.9.1")
-    implementation(platform("io.insert-koin:koin-bom:3.5.1"))
-    implementation("io.insert-koin:koin-android")
-    implementation("io.insert-koin:koin-androidx-compose")
-    implementation("io.insert-koin:koin-androidx-workmanager")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
-    implementation("org.tinylog:tinylog-api-kotlin:2.6.2")
-    implementation("org.tinylog:tinylog-impl:2.6.2")
-    ksp("androidx.room:room-compiler:2.5.2")
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.startup.runtime)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.play.services.auth)
+    /*    implementation(platform("io.insert-koin:koin-bom:3.5.1"))
+        implementation("io.insert-koin:koin-android")
+        implementation("io.insert-koin:koin-androidx-compose")
+        implementation("io.insert-koin:koin-androidx-workmanager")*/
+    implementation(libs.kotlinx.coroutines.play.services)
+    implementation(libs.tinylog.api.kotlin)
+    implementation(libs.tinylog.impl)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.lifecycle.process)
 }

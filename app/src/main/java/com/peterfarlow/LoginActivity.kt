@@ -2,10 +2,10 @@ package com.peterfarlow
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
@@ -14,7 +14,7 @@ import com.peterfarlow.skeleton.BuildConfig
 import com.peterfarlow.skeleton.R
 import org.tinylog.kotlin.Logger
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : ComponentActivity() {
     private lateinit var oneTapClient: SignInClient
     private lateinit var signUpRequest: BeginSignInRequest
 
